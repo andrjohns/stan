@@ -343,7 +343,13 @@ for (size_t i = 0; i < 8; ++i) {
  }
 
 add("dirichlet_log", bare_expr_type(double_type()), bare_expr_type(vector_type()), bare_expr_type(vector_type()));
+add("dirichlet_log", bare_expr_type(double_type()), bare_expr_type(vector_type()), bare_array_type(vector_type(), 1));
+add("dirichlet_log", bare_expr_type(double_type()), bare_array_type(vector_type(), 1), bare_expr_type(vector_type()));
+add("dirichlet_log", bare_expr_type(double_type()), bare_array_type(vector_type(), 1), bare_array_type(vector_type(), 1));
 add("dirichlet_lpdf", bare_expr_type(double_type()), bare_expr_type(vector_type()), bare_expr_type(vector_type()));
+add("dirichlet_lpdf", bare_expr_type(double_type()), bare_expr_type(vector_type()), bare_array_type(vector_type(), 1));
+add("dirichlet_lpdf", bare_expr_type(double_type()), bare_array_type(vector_type(), 1), bare_expr_type(vector_type()));
+add("dirichlet_lpdf", bare_expr_type(double_type()), bare_array_type(vector_type(), 1), bare_array_type(vector_type(), 1));
 add("dirichlet_rng", bare_expr_type(vector_type()), bare_expr_type(vector_type()));
 add("distance", bare_expr_type(double_type()), bare_expr_type(vector_type()), bare_expr_type(vector_type()));
 add("distance", bare_expr_type(double_type()), bare_expr_type(row_vector_type()), bare_expr_type(row_vector_type()));
